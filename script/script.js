@@ -8,6 +8,7 @@ let imgUploader = document.getElementById("image-uploader")
 let pannelSettingHandeler = document.getElementById("pannel-setting-handeler")
 let settingMainPannel = document.getElementById("settings")
 let settingPannel = document.getElementById("setting-pannel")
+let loaderBody = document.getElementById("loader")
 
 // all image control setting
 
@@ -17,7 +18,7 @@ let saturation = document.getElementById("Saturation")
 let grayscale = document.getElementById("GrayScale")
 let invert = document.getElementById("Invert")
 let sepia = document.getElementById("Sepia")
-let blur = document.getElementById("Blur")
+let blurr = document.getElementById("Blur")
 
 
 //functions
@@ -25,7 +26,7 @@ let blur = document.getElementById("Blur")
 
 //events
 
-inputImage.addEventListener("change", () => {   //add event on input file
+inputImage.addEventListener("change",()=>{   //add event on input file
 
     let imgObj = inputImage.files[0]
     if (!imgObj) return   //.file[0]
@@ -59,7 +60,7 @@ pannelSettingHandeler.addEventListener("click",()=>{
     mainEditableImg.style.filter = 'brightness(${brightness.value})'
  })
 
- contranst.addEventListener("change",()=>{
+ contrast.addEventListener("change",()=>{
     mainEditableImg.style.filter = 'contrast(${contrast.value})'
  })
 
@@ -79,6 +80,14 @@ pannelSettingHandeler.addEventListener("click",()=>{
    mainEditableImg.style.filter = 'sepia(${sepia.value})'
  })
 
-  blur.addEventListener("change",()=>{
-   mainEditableImg.style.filter = ' blur(${ blur.value})'
+  blurr.addEventListener("change",()=>{
+   mainEditableImg.style.filter = ' blur(${ blurr.value}px)'
  })
+
+
+ // setTimeOut
+
+ setTimeout(()=>{
+  loaderBody.style.display="none"
+
+ },5000)

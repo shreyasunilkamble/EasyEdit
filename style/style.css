@@ -68,6 +68,7 @@ body,html {
 
 }
 
+
 .right-filter-container {
     height: 100%;
     width: 30vw;
@@ -149,6 +150,18 @@ body,html {
     background-color: #454444;
 }
 
+#img-container{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+#img-main{
+    height: 100%;
+    width: 100%;
+}
+
 .settings{
     height: 100%;
     width: 100%;
@@ -179,7 +192,7 @@ body,html {
 
 .setting-pannel div label{
     text-transform:capitalize;
-    color: rgb(154, 151, 151);
+    color: rgb(151, 153, 154);
     font-size: 1.2em;
 }
 
@@ -191,4 +204,81 @@ body,html {
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 800;
+}
+
+#loader{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1f1e1e;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left,#1b1a1a,transparent,#1b1a1a,transparent,#1b1a1a,#1b1a1a);
+}
+
+.main-loader{
+    height: 40px;
+    width: 330px;
+    background-color: #2c2b2b;
+    margin: auto; 
+    margin-top: 50px;
+    border-radius: 14px;
+}
+
+.loader{
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: #097bec;
+    animation: loader 5s linear infinite;
+    
+} 
+
+.loader-text-container{
+    text-align: center;
+}
+
+@keyframes loader{
+    0%{
+        width: 5%;
+    }
+    10%{
+        width: 10%;
+    }
+    20%{
+        width: 20%;
+    }
+    30%{
+        width: 30%;
+    }
+    40%{
+        widith: 40%;
+    }
+    50%{
+        width: 50%;
+    }
+    60%{
+        width: 60%;
+    }
+    70%{
+        width: 70%;
+    }
+    80%{
+        width: 80%;
+    }
+    90%{
+        width: 90%;
+    }
+    100%{
+        width: 100%;
+    }
 }
